@@ -1,0 +1,44 @@
+*Analyzing A TCP 3-Way Handshake Using Wireshark*
+
+OBJECTIVE:
+  - Understanding and identifying each step of a TCP 3-Way handshake using Wireshark packet capture. The goal is to demonstrate the ability to analyze network traffic and recognize connection initiation patterns.
+
+TOOLS USED:
+  - Wireshark
+  - Microsoft Edge for generating traffic
+
+METHOD:
+  1. Launched Wireshark and began capturing the Wifi traffic
+  2. Applied a TCP filter to the filter section and identified the port
+  3. Filtered the capture by using tcp.port ==(port number)
+  4. Identified the hand shake sequence 
+    -SYN
+    -SYN,ACK
+    -ACK
+  5. Captured screenshots and redacted any personal information
+
+FINDINGS:
+  -SYN Packet 
+    *Source --> Destination
+    *Flags: SYN
+    *Purpose: Client Request to start connection
+
+  -SYN/ACK Packet
+    *Destination --> Source
+    *Flags: SYN,ACK
+    *Purpose: Server acknowledges the request
+
+  -ACK Packet
+    *Client --> Server
+    *Flags: ACK
+    *Purpose: Final handshake, which establishes the connection
+
+ANALYSIS:
+  -The handshake confirms how  TCP establishes a connection between the client and the server. The incrementing sequence and acknowledgement numbers indicate synchronization. There were not retransmissions or anomalies  present which indicate a normal handshake.
+
+SUMMARIZED SKILL:
+- Completed an analysis of a TCP 3-way handshake through the use of Wireshark. Demonstrated an understanding of network protocol and data sanitization.
+
+<----------Refer to redacted images for context.
+
+Thank you!
